@@ -56,5 +56,19 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    draw();
+    function undraw() {
+        current.forEach(index => {
+            squares[currentPosition + index].classList.remove('tetromino')
+        })
+    }
+
+
+    // moving shapes down
+    timerId = setInterval(moveDown, 1000)
+
+    function moveDown() {
+        undraw()
+        currentPosition += width
+        draw()
+    }
 })
