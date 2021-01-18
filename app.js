@@ -44,6 +44,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const theShapes = [lShape, tShape, oShape, iShape, zShape]
 
     let currentPosition = 4
-    let current = theShapes[0][0]
+    let currentRotation = 0
+    let random = Math.floor(Math.random() * theShapes.length)
+    console.log(random)
+    let current = theShapes[random][currentRotation]
 
+    function draw() {
+        current.forEach(index => {
+            squares[currentPosition + index].classList.add('tetromino')
+
+        })
+    }
+
+    draw();
 })
