@@ -49,6 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log(random)
     let current = theShapes[random][currentRotation]
 
+
+
     function draw() {
         current.forEach(index => {
             squares[currentPosition + index].classList.add('tetromino')
@@ -65,6 +67,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // moving shapes down
     timerId = setInterval(moveDown, 1000)
+
+    function control(e) {
+        if (e.keyCode === 37) {
+            moveLeft()
+        }
+    }
+
+    document.addEventListener('keyup', control)
 
     function moveDown() {
         undraw()
@@ -84,5 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    function moveLeft() {
+        undraw()
+        const isAtLeftEdge = current.some(index => (currentPosition + index) % width === 0)
+        if (!isAtLeftEdge) currentPosition -= 1
+        if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+            currentPosition += 1
+        }
+        draw()
+    }
 
 })

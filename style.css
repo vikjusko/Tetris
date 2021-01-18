@@ -1,7 +1,7 @@
 .grid {
     width: 200px;
     height: 400px;
-    background-color: yellow;
+    background-color: #A0DDFF;
     display: flex;
     flex-wrap: wrap;
 }
@@ -12,5 +12,5 @@
 }
 
 .tetromino {
-    background-color: blue;
+    background-color: #FFB8D1;
 }
