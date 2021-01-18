@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const width = 10
     let timerId
     let score = 0
+    const colors = [
+
+    ]
 
     // Shapes
 
@@ -94,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPosition = 4
             draw()
             addScore()
+            gameOver()
         }
 
     }
@@ -164,5 +168,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
+    function gameOver() {
+        if (current.some(index => squares[currentPosition + index].classList.contains('taken'))) {
+            scoreDisplay.innerHTML = "The End!"
+            clearInterval(timerId)
+        }
+    }
 })
