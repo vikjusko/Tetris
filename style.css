@@ -1,7 +1,7 @@
 .grid {
     width: 200px;
     height: 400px;
-    background-color: #A0DDFF;
+    background-image: url(https://www.universetoday.com/wp-content/uploads/2013/10/milky_way.jpg);
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -15,4 +15,36 @@
 .tetromino {
     background-color: #FFB8D1;
     border-radius: 50%;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'Parisienne', cursive;
+    font-weight: bold;
+    color: white;
+}
+
+#start-button {
+    border-radius: 30%;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    color: #FFB8D1;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    font-family: 'Parisienne', cursive;
+    width: 200px;
+    height: 30px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+body {
+    background-image: url(https://i.redd.it/of9hhheujwty.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
